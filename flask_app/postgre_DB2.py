@@ -5,7 +5,7 @@ import numpy
 connection = psycopg2.connect(database="project3", user="jinyoochan")
 cursor = connection.cursor()
 
-df = pd.read_csv("to_postgre.csv")
+df = pd.read_csv("flask_app/Data/refined_data.csv")
 
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS ipo_data_clean(

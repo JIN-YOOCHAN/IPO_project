@@ -5,7 +5,7 @@ def total_to_db():
   connection = psycopg2.connect(database="project3", user="jinyoochan")
   cursor = connection.cursor()
 
-  df = pd.read_csv("./Data/total_to_db.csv")
+  df = pd.read_csv("/Users/jinyoochan/Desktop/project/flask_app/Data/total_to_db.csv")
 
   cursor.execute("""
   CREATE TABLE IF NOT EXISTS ipo_data(
@@ -52,7 +52,7 @@ def new_to_db():
   connection = psycopg2.connect(database="project3", user="jinyoochan")
   cursor = connection.cursor()
 
-  df = pd.read_csv("./Data/new_to_db.csv")
+  df = pd.read_csv("/Users/jinyoochan/Desktop/project/flask_app/Data/new_to_db.csv")
  
   for i in range(len(df)):
     try:

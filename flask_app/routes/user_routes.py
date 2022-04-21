@@ -1,6 +1,7 @@
 from flask import Blueprint
 from flask import render_template
 from flask import jsonify
+import pandas as pd
 import psycopg2
 import csv
 import json
@@ -9,7 +10,12 @@ bp = Blueprint("user", __name__, url_prefix='/')
 
 @bp.route('/', methods=["POST", "GET"])
 def main():
-  return render_template('main.html')
+  table = pd.read_csv("ipo_table.csv")
+  header = list(table.columns)
+  name = list(table.iloc[:,0])
+  predict = list(table.iloc[:,1])
+  profit = list(table.iloc[:,2])
+  return render_template('main.html',table_header = table, table_name =name, table_predict = predict, table_profit = profit)
 
 @bp.route('/api', methods=["POST", "GET"])
 def api():

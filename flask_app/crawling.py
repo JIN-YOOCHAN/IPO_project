@@ -15,7 +15,7 @@ def crawling_total():
   chrome_options = webdriver.ChromeOptions()
   driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
 
-  page_num = [i for i in range(1,999999999)]
+  page_num = [i for i in range(1,999)]
   total_lst = []
 
   for i in page_num:
@@ -229,4 +229,6 @@ def crawling_new():
 
   total_df = pd.DataFrame(new_lst, columns=headers)
 
-  return total_df.to_csv("./Data/new_to_db.csv")
+  return total_df.to_csv("/Users/jinyoochan/Desktop/project/flask_app/Data/new_to_db.csv")
+
+
