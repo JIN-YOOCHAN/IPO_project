@@ -9,6 +9,10 @@ from flask import render_template
 from apscheduler.schedulers.background import BackgroundScheduler
 import csv
 
+# 웹서비스
+if __name__ == "__main__":
+  app = create_app()
+  app.run()
 
 def create_app():
   app = Flask(__name__)
