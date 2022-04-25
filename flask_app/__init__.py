@@ -4,7 +4,7 @@ import flask_app.crawling as crawling
 import flask_app.postgre_DB as postgre_DB
 from re import A
 from flask import Flask
-from routes import user_routes
+import user_routes
 from flask import render_template
 from apscheduler.schedulers.background import BackgroundScheduler
 import csv
