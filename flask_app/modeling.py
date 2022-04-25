@@ -309,7 +309,6 @@ X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.
 from sklearn.pipeline import make_pipeline
 from sklearn.impute import SimpleImputer
 from sklearn.ensemble import RandomForestRegressor
-import xgboost as xgb
 from sklearn.model_selection import RandomizedSearchCV
 from sklearn.metrics import r2_score
 from sklearn.metrics import mean_squared_error
