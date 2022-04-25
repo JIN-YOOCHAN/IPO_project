@@ -20,6 +20,8 @@ def main():
 
 @bp.route('/api', methods=["POST", "GET"])
 def api():
+  # 로컬 내 DB에서 직접 가져오기
+  '''
   connection = psycopg2.connect(database="project3", user="jinyoochan")
   cursor = connection.cursor()
   cursor.execute("""
@@ -33,5 +35,7 @@ def api():
         "percent_personal","percent_lock_up","capital","company_size","profit"]
 
   rows = headers+rows
+  '''
+  data =pd.read_csv("flask_app/Data/db_to_modeling.csv")
   
-  return jsonify(rows)
+  return jsonify(data)
