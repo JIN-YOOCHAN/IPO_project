@@ -10,14 +10,17 @@ from apscheduler.schedulers.background import BackgroundScheduler
 import csv
 
 # 웹서비스
-if __name__ == "__main__":
-  app = create_app()
-  app.run()
 
 def create_app():
   app = Flask(__name__)
   app.register_blueprint(user_routes.bp)
   return app.run()
+
+
+if __name__ == "__main__":
+  app = create_app()
+  app.run()
+
 
 def modeling():
   import flask_app.modeling as modeling
