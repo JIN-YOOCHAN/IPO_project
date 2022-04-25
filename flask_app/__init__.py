@@ -4,7 +4,7 @@ import flask_app.crawling as crawling
 import flask_app.postgre_DB as postgre_DB
 from re import A
 from flask import Flask
-import flask_app.user_route as user_routes
+
 
 
 from flask import render_template
@@ -15,6 +15,7 @@ import csv
 
 def create_app():
   app = Flask(__name__)
+  import flask_app.user_route as user_routes
   app.register_blueprint(user_routes.bp)
   return app.run()
 
@@ -29,7 +30,6 @@ def modeling():
   return modeling
 
 
-'''
 # 매일 변경사항 업데이트
 scheduler = BackgroundScheduler({'apscheduler.timezone':'UTC'})
 # 데이터수집
@@ -40,7 +40,7 @@ scheduler.add_job(func=postgre_DB.new_to_db, trigger = 'interval', days=1)
 scheduler.add_job(func = modeling, trigger= 'interval', days=1)
 
 scheduler.start()
-'''
+
 
 
 # 웹서비스
