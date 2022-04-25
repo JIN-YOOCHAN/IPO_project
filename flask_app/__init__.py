@@ -29,6 +29,7 @@ def modeling():
   return modeling
 
 
+'''
 # 매일 변경사항 업데이트
 scheduler = BackgroundScheduler({'apscheduler.timezone':'UTC'})
 # 데이터수집
@@ -39,6 +40,7 @@ scheduler.add_job(func=postgre_DB.new_to_db, trigger = 'interval', days=1)
 scheduler.add_job(func = modeling, trigger= 'interval', days=1)
 
 scheduler.start()
+'''
 
 
 # 웹서비스
