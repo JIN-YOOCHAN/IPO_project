@@ -21,7 +21,10 @@ def create_app():
 
 if __name__ == "__main__":
   app = create_app()
+  
+  # 한글 깨짐 방지
   app.config["JSON_AS_ASCII"] = False
+
   app.run()
 
 

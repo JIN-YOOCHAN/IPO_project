@@ -15,4 +15,3 @@ apscheduler로 새 데이터 업데이트
 
 @ 웹서비스 배포 사이트
 https://yoochan.herokuapp.com/
-https://yoochan.herokuapp.com/api
