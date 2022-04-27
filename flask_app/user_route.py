@@ -17,10 +17,13 @@ def main():
   profit = list(table.iloc[:,2])
   return render_template('main.html',table_header = table, table_name =name, table_predict = predict, table_profit = profit)
 
+@bp.rooute('/modoo')
+def modoo():
+  return render_template('modoo.html')
+
 
 @bp.route('/api', methods=["POST", "GET"])
 def api():
-
 
   # 로컬배포시 DB에서 직접 가져오기
   '''
@@ -39,9 +42,9 @@ def api():
   rows = headers+rows
   '''
 
-
   data = pd.read_csv("flask_app/Data/db_to_modeling.csv")
   data = data.columns.values.tolist()+data.values.tolist()
+  data = json.dumps(data, ensure_ascii=False)
   return jsonify(data)
 
 
