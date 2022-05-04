@@ -17,7 +17,7 @@ def main():
   profit = list(table.iloc[:,2])
   return render_template('main.html',table_header = table, table_name =name, table_predict = predict, table_profit = profit)
 
-@bp.rooute('/modoo')
+@bp.route('/modoo')
 def modoo():
   return render_template('modoo.html')
 
