@@ -373,9 +373,9 @@ df_to_db.drop(columns="sectors_cat", inplace=True)
 
 df_to_db.info()
 
-df_to_db.to_csv("flask_app/Data/refined_data.csv")
+df_to_db.to_csv("/Users/jinyoochan/Desktop/IPO_project/flask_app/Data/refined_data.csv")
 
-result.to_csv("flask_app/Data/ipo_table.csv")
+result.to_csv("/Users/jinyoochan/Desktop/IPO_project/flask_app/Data/ipo_table.csv") 
 
 
 

@@ -229,6 +229,5 @@ def crawling_new():
 
   total_df = pd.DataFrame(new_lst, columns=headers)
 
-  return total_df.to_csv("/Users/jinyoochan/Desktop/project/flask_app/Data/new_to_db.csv")
-
+  return total_df.to_csv("/Users/jinyoochan/Desktop/IPO_project/flask_app/Data/new_to_db.csv")
 

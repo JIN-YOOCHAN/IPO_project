@@ -42,7 +42,7 @@ scheduler.add_job(func=postgre_DB.new_to_db, trigger = 'interval', days=1)
 # 데이터 추출 및 모델링
 scheduler.add_job(func = modeling, trigger= 'interval', days=1)
 
-scheduler.start()
+#scheduler.start()
 
 
 
